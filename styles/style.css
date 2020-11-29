@@ -1,0 +1,164 @@
+
+/* A menü */
+.Menu {
+	height: 100vh; /* A menü magassága*/
+	width: 10vw; /* A menü szélessége */
+	position: fixed; /* Fix pozíció */
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111; /* Fekete */
+	overflow-x: hidden; /* Horizontális görgetés kikapcsolva */
+	padding-top: 2.5vh;
+	font-family: 'Oswald';
+}
+
+/* A menü linkjei */
+.Menu a {
+	padding: 0.8vh 0.8vw 0.8vh 1vw;
+	text-decoration: none;
+	font-size: 100%;
+	color: #818181;
+	display: block;
+}
+
+/* A menü al linkjei */
+.SubMenu a {
+	padding: 0.4vh 0.4vw 0.4vh 2vw;
+	font-size:75%;
+}
+
+/* A link színének megváltozása egér hatására */
+.Menu a:hover {
+	color: #f1f1f1;
+}
+
+/* A tartalom stílusa */
+.Tartalom {
+	margin-left: 10vw; /* A menü szélessége */
+	padding: 0vh 0.8vw;
+	font-family: 'Oswald';
+}
+
+/* Blokk */
+.VersBlokk {
+	margin-top: 0.8vh;
+	padding: 0.8vh 0.8vw;
+	border-top: solid;
+}
+
+/* Blokk */
+.Blokk {
+	margin-top: 0.8vh;
+	padding: 0.8vh 0.8vw;
+	border-style: solid;
+}
+
+/* Blokk cím */
+.Blokk h1 {
+}
+
+/* Felsorolás */
+.Felsorolas {
+	margin-top: 0.8vh;
+	padding: 0.8vh 0.8vw;
+	font-size: 2.5vh;
+}
+
+/* Főcím */
+.Focim {
+	text-align: center;
+}
+
+/* Főcím h1 */
+.Focim h1 {
+	border-style: solid;
+	display: inline-block;
+	font-size: 6vh;
+}
+
+/* Főcím h2 */
+.Focim h2 {
+	border-style: solid;
+	display: inline-block;
+	font-size: 5vh;
+}
+
+/* Konténer */
+.Kontener {
+	position: relative;
+}
+
+/* Képek */
+.Kepek {
+	display: none;
+}
+
+/* Kép csúszka */
+.Kep {
+	max-height: 75vh;
+	min-height: 60vh;
+	height: auto !important;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Versek */
+.Versek {
+	display: none;
+	max-height: 80vh;
+	min-height: 80vh;
+	text-align: center;
+	height: auto !important;
+	display: block;
+	margin: auto;
+}
+
+/* Vers cím */
+.Versek h3 {
+	font-size: 4.5vh;
+	border-bottom: solid;
+	display: inline-block;
+}
+
+/* Vers cím */
+.Versek p {
+	font-size: 3vh;
+}
+
+/* Vers cím */
+.datum {
+	font-size: 2vh;
+	margin-bottom: 5vh;
+}
+
+/* Előző és következő gomb */
+.elozo,
+.kovetkezo {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	color: black;
+	font-weight: bold;
+	font-size: large;
+	margin: 5vh 0 0 7vw;
+	border-radius: 0 1vw 1vh 0;
+}
+
+.kovetkezo {
+	right: 0;
+	margin: 5vh 7vw 0 7vw;
+	border-radius: 1vh 0 0 1vw;
+}
+
+.elozo:hover,
+.kovetkezo:hover {
+	background-color: rgba( 0, 0, 0, 0.8);
+}
+
+body {
+	font-size: 1vw;
+	background-color: #c9d3d8;
+}

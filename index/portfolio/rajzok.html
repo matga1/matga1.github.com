@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+		<meta charset="UTF-8>
+		<meta name="viewport" content="width/device-width, initial-scale=1.0">
+		<title>Rajzok</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald" rel="stylesheet">
+		<link rel="stylesheet" href="../../styles/style.css">
+	</head>
+
+	<body>
+		<!-- Oldalsó navigáció -->
+		<div class="Menu">
+			<a href="../../index/bemutatkozas.html">Bemutatkozás</a>
+			<a href="../../index/hatter.html">Háttér</a>
+				<div class="SubMenu">
+					<a href="../hatter/iskolak.html">Iskolák</a>
+					<a href="../hatter/nyelvtudas.html">Nyelvtudás</a>
+					<a href="../hatter/munkak.html">Munkatapasztalat</a>
+				</div>
+			<a href="../../index/portfolio.html">Portfólió</a>
+				<div class="SubMenu">
+					<a href="../portfolio/fenykepek.html">Fényképek</a>
+					<a href="../portfolio/festmenyek.html">Festmények</a>
+					<a href="../portfolio/rajzok.html">Rajzok</a>
+					<a href="../portfolio/versek.html">Versek</a>
+				</div>
+			<a href="../../index/leiras.html">Leírás</a>
+		</div>
+		
+		<!-- Oldal tartalma -->
+		<div class="Tartalom">
+		
+			<div class="Focim">
+				<h1>
+					Portfólió
+				</h1>
+				<br>
+				<h2>
+					Rajzok
+				</h2>
+			</div>
+		
+			<div class="Blokk">			
+				<div class="Kontener">
+
+					<!-- Képek -->
+					<div class="Kepek">
+						<img class="Kep" src="rajzok/images/1.jpg">
+					</div>
+					<div class="Kepek">
+						<img class="Kep" src="rajzok/images/2.jpg">
+					</div>
+					<div class="Kepek">
+						<img class="Kep" src="rajzok/images/3.jpg">
+					</div>
+					<div class="Kepek">
+						<img class="Kep" src="rajzok/images/4.jpg">
+					</div>
+					<div class="Kepek">
+						<img class="Kep" src="rajzok/images/5.jpg">
+					</div>
+					<div class="Kepek">
+						<img class="Kep" src="rajzok/images/6.jpg">
+					</div>
+					<div class="Kepek">
+						<img class="Kep" src="rajzok/images/7.jpg">
+					</div>
+					<div class="Kepek">
+						<img class="Kep" src="rajzok/images/8.jpg">
+					</div>
+					<div class="Kepek">
+						<img class="Kep" src="rajzok/images/9.jpg">
+					</div>
+
+					<!-- Előző és következő gomb -->
+					<a class="elozo" onclick="kepValaszto(-1)">&#10094;</a>
+					<a class="kovetkezo" onclick="kepValaszto(1)">&#10095;</a>
+					
+				</div>
+			</div>
+		
+		</div>
+
+		<script>
+			var kepIndex = 1;
+			kepMegjelenito(kepIndex);
+
+			function kepValaszto(n) {
+				kepMegjelenito(kepIndex += n);
+			}
+
+			function kepMegjelenito(n) {
+				var i;
+				var kepek = document.getElementsByClassName("Kepek");
+				
+				if (n > kepek.length) {kepIndex = 1}
+				
+				if (n < 1) {kepIndex = kepek.length}
+				
+				for (i = 0; i < kepek.length; i++) {
+					kepek[i].style.display = "none";  
+				}
+				
+				kepek[kepIndex-1].style.display = "block";  
+			}
+		</script>
+
+	</body>
+</html>
